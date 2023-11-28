@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/animationFragment">
+
+    <fragment
+        android:id="@+id/animationFragment"
+        android:name="com.example.leagueofchamps.AnimationFragment"
+        android:label="fragment_animation"
+        tools:layout="@layout/fragment_animation" />
+    <fragment
+        android:id="@+id/finalAnimationFragment"
+        android:name="com.example.leagueofchamps.FinalAnimationFragment"
+        android:label="fragment_final_animation"
+        tools:layout="@layout/fragment_final_animation" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.leagueofchamps.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.leagueofchamps.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/recuperarContrasenaFragment"
+        android:name="com.example.leagueofchamps.recuperarContrasenaFragment"
+        android:label="fragment_recuperar_contrasena"
+        tools:layout="@layout/fragment_recuperar_contrasena" />
+    <fragment
+        android:id="@+id/buscadorDeCampeones"
+        android:name="com.example.leagueofchamps.buscadorDeCampeones"
+        android:label="fragment_buscador_de_campeones"
+        tools:layout="@layout/fragment_buscador_de_campeones" />
+    <fragment
+        android:id="@+id/crearCampeon1"
+        android:name="com.example.leagueofchamps.CrearCampeon1"
+        android:label="fragment_crear_campeon1"
+        tools:layout="@layout/fragment_crear_campeon1" />
+    <fragment
+        android:id="@+id/crearCampeon2"
+        android:name="com.example.leagueofchamps.CrearCampeon2"
+        android:label="fragment_crear_campeon2"
+        tools:layout="@layout/fragment_crear_campeon2" />
+    <fragment
+        android:id="@+id/crearCampeon3"
+        android:name="com.example.leagueofchamps.CrearCampeon3"
+        android:label="fragment_crear_campeon3"
+        tools:layout="@layout/fragment_crear_campeon3" />
+</navigation>
