@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="#757575">
 
-    <!-- Título -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Subtítulo -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
@@ -34,7 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-    <!-- Campo de contraseña -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="312dp"
@@ -84,7 +81,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 
-    <!-- Botón de inicio de sesión -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="312dp"
@@ -100,7 +96,6 @@
         app:layout_constraintTop_toBottomOf="@+id/forgot_pass"
         tools:ignore="TextSizeCheck" />
 
-    <!-- Enlace para crear una cuenta -->
     <TextView
         android:id="@+id/tvCreateAccount"
         android:layout_width="wrap_content"
