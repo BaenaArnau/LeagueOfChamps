@@ -50,19 +50,4 @@
         android:name="com.example.leagueofchamps.CrearCampeon3"
         android:label="fragment_crear_campeon3"
         tools:layout="@layout/fragment_crear_campeon3" />
-    <fragment
-        android:id="@+id/finalAnimacion2"
-        android:name="com.example.leagueofchamps.finalAnimacion2"
-        android:label="fragment_final_animacion2"
-        tools:layout="@layout/fragment_final_animacion2" />
-    <fragment
-        android:id="@+id/buscarInvocador"
-        android:name="com.example.leagueofchamps.BuscarInvocador"
-        android:label="fragment_buscar_invocador"
-        tools:layout="@layout/fragment_buscar_invocador" />
-    <fragment
-        android:id="@+id/buscarForo"
-        android:name="com.example.leagueofchamps.BuscarForo"
-        android:label="fragment_buscar_foro"
-        tools:layout="@layout/fragment_buscar_foro" />
 </navigation>
