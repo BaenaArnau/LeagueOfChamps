@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
@@ -17,21 +18,22 @@ public class ElementosViewModel extends AndroidViewModel {
     public ElementosViewModel(@NonNull Application application) {
         super(application);
 
-        elementosRepositorio = new ElementosRepositorio();
-
-        listElementosMutableLiveData.setValue(elementosRepositorio.obtener());
+        elementosRepositorio = new ElementosRepositorio(application);
     }
 
-    MutableLiveData<List<Campeon>> obtener(){
-        return listElementosMutableLiveData;
+    LiveData<List<Campeon>> obtener(){
+        return elementosRepositorio.obtener();
     }
+    MutableLiveData<Campeon> elementoSeleccionado = new MutableLiveData<>();
 
     void insertar(Campeon elemento){
-        elementosRepositorio.insertar(elemento, new ElementosRepositorio.Callback() {
-            @Override
-            public void cuandoFinalice(List<Campeon> elementos) {
-                listElementosMutableLiveData.setValue(elementos);
-            }
-        });
+        elementosRepositorio.insertar(elemento);
+    }
+    void seleccionar(Campeon elemento){
+        elementoSeleccionado.setValue(elemento);
+    }
+
+    MutableLiveData<Campeon> seleccionado(){
+        return elementoSeleccionado;
     }
 }

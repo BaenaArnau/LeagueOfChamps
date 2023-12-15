@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nombreStatico"
+        android:text="Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/apodoStatico"
+        android:text="Apodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/apodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/pasivaStatico"
+        android:text="Pasiva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/pasiva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaQStatico"
+        android:text="Habilidad En La Q"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaWStaticto"
+        android:text="Habilidad En La W"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaEStatico"
+        android:text="Habilidad En La E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaRStatico"
+        android:text="Habilidad En La R"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/habilidadEnLaR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"/>
+
+</LinearLayout>

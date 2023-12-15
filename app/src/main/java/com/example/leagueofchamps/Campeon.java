@@ -1,6 +1,12 @@
 package com.example.leagueofchamps;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Campeon {
+    @PrimaryKey(autoGenerate = true)
+    int id;
     String nombre, apodo, pasiva,habilidad1, habilidad2, habilidad3, habilidad4;
 
     public Campeon(String nombre, String apodo, String pasiva, String habilidad1, String habilidad2, String habilidad3, String habilidad4) {

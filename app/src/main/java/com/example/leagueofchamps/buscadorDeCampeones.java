@@ -31,6 +31,8 @@ public class buscadorDeCampeones extends Fragment {
         binding = FragmentBuscadorDeCampeonesBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
+
+
         return view;
     }
 
@@ -86,6 +88,14 @@ public class buscadorDeCampeones extends Fragment {
             Campeon elemento = elementos.get(position);
 
             holder.binding.nombre.setText(elemento.nombre);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    elementosViewModel.seleccionar(elemento);
+                    navController.navigate(R.id.action_recyclerElementosFragment_to_mostrarElementoFragment);
+                }
+            });
         }
 
         @Override

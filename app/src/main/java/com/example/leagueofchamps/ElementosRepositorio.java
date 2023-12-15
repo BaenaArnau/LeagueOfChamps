@@ -1,30 +1,33 @@
 package com.example.leagueofchamps;
 
+import android.app.Application;
+
+import androidx.lifecycle.LiveData;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class ElementosRepositorio {
 
-    List<Campeon> elementos = new ArrayList<>();
+    Executor executor = Executors.newSingleThreadExecutor();
+    ElementosBaseDeDatos.ElementosDao elementosDao;
 
-    interface Callback {
-        void cuandoFinalice(List<Campeon> elementos);
+    ElementosRepositorio(Application application){
+        elementosDao = ElementosBaseDeDatos.obtenerInstancia(application).obtenerElementosDao();
     }
 
-    ElementosRepositorio(){
-        elementos.add(new Campeon("Ahri", "La Encantadora", "Pasiva de Ahri", "Orbe del engaño","Orbe de Fuego", "Encanto", "Destello Espiritual"));
-        elementos.add(new Campeon("Gwen", "La Hija de la Araña", "Pasiva de Gwen", "Tijeras Hextech", "Enlace Etéreo", "Vestiduras Hextech", "Hilos"));
-        elementos.add(new Campeon("Xayah", "La Rebelde", "Pasiva de Xayah", "Disparo de plumas","Cuchillas Dobles", "Corte de Plumas", "Tormenta de Plumas"));
-        elementos.add(new Campeon("Nami", "La Invocadora de Mareas", "Pasiva de Nami", "Golpe del Fluido", "Altas Mareas", "Bendición de las Aguas", "Sunami"));
-        elementos.add(new Campeon("Jax", "El Maestro de Armas", "Pasiva de Jax", "Golpe potenciado","Golpe de Salto", "Empujón Relámpago", "Ira del Gran Maestro"));
+    LiveData<List<Campeon>> obtener(){
+        return elementosDao.obtener();
     }
 
-    List<Campeon> obtener() {
-        return elementos;
-    }
-
-    void insertar(Campeon elemento, Callback callback){
-        elementos.add(elemento);
-        callback.cuandoFinalice(elementos);
+    void insertar(Campeon elemento){
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                elementosDao.insertar(elemento);
+            }
+        });
     }
 }
