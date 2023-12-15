@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="1000"
+        android:propertyName="backgroundColor"
+        android:valueTo="#000000"
+        android:valueType="colorType" />
+    <objectAnimator
+        android:duration="1000"
+        android:propertyName="backgroundColor"
+        android:startDelay="1000"
+        android:valueTo="#FFFFFF"
+        android:valueType="colorType" />
+</set>

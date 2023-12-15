@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/bottom1Fragment"
+        android:id="@+id/buscadorDeCampeones"
         android:icon="@drawable/boton_menu1"
-        android:title="Bottom 1" />
+        android:title="Campeones" />
 
     <item
-        android:id="@+id/bottom2Fragment"
+        android:id="@+id/buscadorDeInvocadoresFragment"
         android:icon="@drawable/boton_menu2"
-        android:title="Bottom 2" />
+        android:title="Invocadores" />
 
     <item
-        android:id="@+id/bottom3Fragment"
+        android:id="@+id/buscadorDeForoFragment"
         android:icon="@drawable/boton_menu3"
-        android:title="Bottom 3" />
+        android:title="Foros" />
 </menu>

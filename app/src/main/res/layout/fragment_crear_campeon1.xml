@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearCampeon1">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/nombre"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:hint="Nombre"/>
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apodo"/>
+    <EditText
+        android:id="@+id/pasiva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pasiva"/>
+    <EditText
+        android:id="@+id/habilidadEnLaQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habilidad En La Q"/>
+    <EditText
+        android:id="@+id/habilidadEnLaW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habilidad En La W"/>
+    <EditText
+        android:id="@+id/habilidadEnLaE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habilidad En La E"/>
+    <EditText
+        android:id="@+id/habilidadEnLaR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habilidad En La R"/>
+    <Button
+        android:id="@+id/crear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CREAR"/>
+</LinearLayout>
