@@ -39,7 +39,7 @@ public class buscadorDeCampeones extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
-        elementosViewModel = new ViewModelProvider(this).get(ElementosViewModel.class);
+        elementosViewModel = new ViewModelProvider(requireActivity()).get(ElementosViewModel.class);
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -59,7 +59,6 @@ public class buscadorDeCampeones extends Fragment {
                 elementosAdapter.establecerLista(elementos);
             }
         });
-
     }
 
     class ElementoViewHolder extends RecyclerView.ViewHolder {
