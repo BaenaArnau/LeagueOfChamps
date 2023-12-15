@@ -43,7 +43,6 @@ public class LoginFragment extends Fragment {
         return view;
     }
 
-    // Método para validar los campos del formulario
     private boolean validateFields() {
         EditText etEmail = getView().findViewById(R.id.etEmail);
         EditText etPassword = getView().findViewById(R.id.etPassword);
@@ -52,13 +51,11 @@ public class LoginFragment extends Fragment {
         String password = etPassword.getText().toString();
 
         if (email.isEmpty() || password.isEmpty()) {
-            // Muestra un mensaje de error si algún campo está vacío
             showToast("Todos los campos deben estar completos.");
             return false;
         }
 
         if (!isValidEmail(email)) {
-            // Muestra un mensaje de error si el formato del correo no es válido
             showToast("Ingrese un correo electrónico válido.");
             return false;
         }
@@ -66,12 +63,10 @@ public class LoginFragment extends Fragment {
         return true;
     }
 
-    // Método para validar el formato del correo electrónico
     private boolean isValidEmail(String email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    // Método para mostrar notificaciones en forma de Toast
     private void showToast(String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
