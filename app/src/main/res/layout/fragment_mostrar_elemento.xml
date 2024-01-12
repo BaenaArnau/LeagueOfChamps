@@ -16,7 +16,7 @@
         android:id="@+id/nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/apodoStatico"
         android:text="Apodo"
@@ -27,7 +27,7 @@
         android:id="@+id/apodo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/pasivaStatico"
         android:text="Pasiva"
@@ -38,7 +38,7 @@
         android:id="@+id/pasiva"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/habilidadEnLaQStatico"
         android:text="Habilidad En La Q"
@@ -49,7 +49,7 @@
         android:id="@+id/habilidadEnLaQ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/habilidadEnLaWStaticto"
         android:text="Habilidad En La W"
@@ -60,7 +60,7 @@
         android:id="@+id/habilidadEnLaW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/habilidadEnLaEStatico"
         android:text="Habilidad En La E"
@@ -71,7 +71,7 @@
         android:id="@+id/habilidadEnLaE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
     <TextView
         android:id="@+id/habilidadEnLaRStatico"
         android:text="Habilidad En La R"
@@ -82,6 +82,6 @@
         android:id="@+id/habilidadEnLaR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"/>
+        android:textSize="12sp"/>
 
 </LinearLayout>

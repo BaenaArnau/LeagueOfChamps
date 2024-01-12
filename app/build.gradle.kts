@@ -57,4 +57,8 @@ dependencies {
     implementation ("com.google.android.material:material:1.4.0")
     implementation ("androidx.room:room-runtime:2.2.5")
     annotationProcessor ("androidx.room:room-compiler:2.2.5")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.22")
+
 }
