@@ -9,7 +9,14 @@
         android:id="@+id/loginFragment"
         android:name="com.example.leagueofchamps.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/buscadorDeCampeones"
         android:name="com.example.leagueofchamps.buscadorDeCampeones"
@@ -31,7 +38,14 @@
         android:id="@+id/buscadorDeInvocadoresFragment"
         android:name="com.example.leagueofchamps.BuscadorDeInvocadoresFragment"
         android:label="fragment_buscador_de_invocadores"
-        tools:layout="@layout/fragment_buscador_de_invocadores" />
+        tools:layout="@layout/fragment_buscador_de_invocadores" >
+        <action
+            android:id="@+id/action_buscadorDeInvocadoresFragment_to_buscadorDeForoFragment"
+            app:destination="@id/buscadorDeForoFragment" />
+        <action
+            android:id="@+id/action_buscadorDeInvocadoresFragment_to_buscadorDeForoFragment2"
+            app:destination="@id/buscadorDeForoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/buscadorDeForoFragment"
         android:name="com.example.leagueofchamps.BuscadorDeForoFragment"
@@ -41,10 +55,35 @@
         android:id="@+id/menuFragment"
         android:name="com.example.leagueofchamps.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_buscadorDeInvocadoresFragment"
+            app:destination="@id/buscadorDeInvocadoresFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_buscadorDeCampeones"
+            app:destination="@id/buscadorDeCampeones" />
+        <action
+            android:id="@+id/action_menuFragment_to_buscadorDeForoFragment"
+            app:destination="@id/buscadorDeForoFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_buscadorDeInvocadoresFragment2"
+            app:destination="@id/buscadorDeInvocadoresFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_buscadorDeForoFragment2"
+            app:destination="@id/buscadorDeForoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mostrarElemento"
         android:name="com.example.leagueofchamps.MostrarElementoFragment"
         android:label="fragment_mostrar_elemento"
         tools:layout="@layout/fragment_mostrar_elemento" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.leagueofchamps.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>

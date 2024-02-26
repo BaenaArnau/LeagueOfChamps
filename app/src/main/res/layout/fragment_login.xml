@@ -18,6 +18,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -31,6 +32,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <EditText
@@ -45,6 +47,7 @@
         android:padding="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPassword"
         app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -56,6 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintBottom_toTopOf="@+id/forgot_pass"
         app:passwordToggleEnabled="true"
         tools:ignore="MissingConstraints">
 
@@ -82,6 +86,7 @@
         android:textColor="#2F89FC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 
     <Button
@@ -96,6 +101,7 @@
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateAccount"
         app:layout_constraintTop_toBottomOf="@+id/forgot_pass"
         tools:ignore="TextSizeCheck" />
 
@@ -108,6 +114,7 @@
         android:text="Don't have an account?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/singup"
+        app:layout_constraintBottom_toTopOf="@+id/or"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
@@ -116,10 +123,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginRight="73dp"
+        android:layout_marginBottom="15dp"
         android:text="Singup"
         android:textColor="#2F89FC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvCreateAccount"
+        app:layout_constraintBottom_toTopOf="@+id/or"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 
@@ -133,6 +142,7 @@
         android:text="Login with Facebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginGoogle"
         app:layout_constraintTop_toBottomOf="@id/or" />
 
     <Button
@@ -146,6 +156,7 @@
         android:text="Login with Google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/enter_witho"
         app:layout_constraintTop_toBottomOf="@id/btnLoginFacebook" />
 
     <TextView
@@ -159,18 +170,19 @@
         android:text="Or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginFacebook"
         app:layout_constraintTop_toBottomOf="@id/tvCreateAccount" />
 
     <TextView
         android:id="@+id/enter_witho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="23dp"
         android:layout_marginLeft="186dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="187dp"
         android:text="enter without login"
         android:textColor="#2F89FC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLoginGoogle" />
