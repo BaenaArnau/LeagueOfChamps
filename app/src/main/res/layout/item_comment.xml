@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/darkGray">
+
+    <!-- Comentario principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuario1: ¡Este es un comentario genial!"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"/>
+
+    <!-- Subcomentarios -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     Usuario2: Sí, estoy de acuerdo."
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     Usuario3: Yo también pienso lo mismo."
+        android:textSize="14sp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

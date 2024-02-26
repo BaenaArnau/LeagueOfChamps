@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_restorePasswordFragment"
+            app:destination="@id/restorePasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/buscadorDeCampeones"
@@ -50,7 +53,11 @@
         android:id="@+id/buscadorDeForoFragment"
         android:name="com.example.leagueofchamps.BuscadorDeForoFragment"
         android:label="fragment_buscador_de_foro"
-        tools:layout="@layout/fragment_buscador_de_foro" />
+        tools:layout="@layout/fragment_buscador_de_foro" >
+        <action
+            android:id="@+id/action_buscadorDeForoFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.leagueofchamps.MenuFragment"
@@ -86,4 +93,18 @@
             android:id="@+id/action_registerFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/restorePasswordFragment"
+        android:name="com.example.leagueofchamps.RestorePasswordFragment"
+        android:label="fragment_restore_password"
+        tools:layout="@layout/fragment_restore_password" >
+        <action
+            android:id="@+id/action_restorePasswordFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.leagueofchamps.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" />
 </navigation>
