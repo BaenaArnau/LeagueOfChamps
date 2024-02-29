@@ -1,19 +1,16 @@
 package com.example.leagueofchamps;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.example.leagueofchamps.databinding.FragmentCrearCampeon1Binding;
 
 public class CrearCampeon1 extends Fragment {
@@ -57,5 +54,13 @@ public class CrearCampeon1 extends Fragment {
             }
         });
 
+        // Configurar OnClickListener para el botón "SALIR"
+        binding.exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener el NavController y navegar al fragmento deseado
+                navController.popBackStack();
+            }
+        });
     }
 }

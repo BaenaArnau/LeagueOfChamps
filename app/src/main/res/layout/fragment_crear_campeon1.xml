@@ -61,4 +61,11 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="CREAR"/>
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:textColor="@color/white"
+        android:text="SALIR"/>
 </LinearLayout>

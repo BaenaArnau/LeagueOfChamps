@@ -55,6 +55,15 @@ public class buscadorDeCampeones extends Fragment {
             }
         });
 
+        // Agregar OnClickListener a la flecha hacia atrás
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí debes reemplazar "R.id.destino_fragmento" con el ID del fragmento al que deseas navegar
+                navController.navigate(R.id.loginFragment);
+            }
+        });
+
         elementosViewModel.obtener().observe(getViewLifecycleOwner(), new Observer<List<Campeon>>() {
             @Override
             public void onChanged(List<Campeon> elementos) {

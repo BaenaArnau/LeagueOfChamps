@@ -24,17 +24,9 @@
             android:id="@+id/backArrow"
             android:layout_width="35dp"
             android:layout_height="37dp"
-
             android:src="@drawable/arrow_left"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/league_of_legends_logo_transparent" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <GridLayout
@@ -67,6 +59,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="#5C035E"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

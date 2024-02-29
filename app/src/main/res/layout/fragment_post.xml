@@ -4,20 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGray">
+    android:background="@color/darkGray"
+    android:id="@+id/post"
+    tools:context=".PostFragment">
+
 
     <!-- Barra de navegación -->
-    <com.google.android.material.appbar.MaterialToolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:backgroundTint="@color/darkGray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/hello_world"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="print('hello world!')"
-        app:titleTextColor="@android:color/white" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="35dp"
+            android:layout_height="37dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/arrow_left" />
+    </androidx.appcompat.widget.Toolbar>
 
 
     <!-- Información del grupo -->
@@ -33,7 +41,7 @@
 
 
     <!-- Botón "Crear una publicación" -->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/createPostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,15 +52,40 @@
         android:layout_marginTop="16dp" />
 
     <!-- Lista de publicaciones -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/postsRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/createPostButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkGray"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="16dp"
-        tools:listitem="@layout/item_comment" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPostButton">
+
+        <!-- Comentario principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Usuario1: ¡Este es un comentario genial!"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- Subcomentarios -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:text="     Usuario2: Sí, estoy de acuerdo."
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="     Usuario3: Yo también pienso lo mismo."
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,9 @@ package com.example.leagueofchamps;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginFragment extends Fragment {
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
@@ -22,12 +24,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (validateFields()) {
-                    // Todos los campos son válidos, inicia la siguiente actividad
+                    // Todos los campos son válidos, navega al menú
                     Intent intent = new Intent(getActivity(), MenuFragment.class);
                     startActivity(intent);
                 }
             }
         });
+
         TextView enterWithoutLoginTextView = view.findViewById(R.id.enter_witho);
         enterWithoutLoginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
