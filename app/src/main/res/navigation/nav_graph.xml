@@ -48,6 +48,9 @@
         <action
             android:id="@+id/action_buscadorDeInvocadoresFragment_to_buscadorDeForoFragment2"
             app:destination="@id/buscadorDeForoFragment" />
+        <action
+            android:id="@+id/action_buscadorDeInvocadoresFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/buscadorDeForoFragment"
@@ -107,4 +110,27 @@
         android:name="com.example.leagueofchamps.PostFragment"
         android:label="fragment_post"
         tools:layout="@layout/fragment_post" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.leagueofchamps.userFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_userFavoriteChampsFragment"
+            app:destination="@id/userFavoriteChampsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFavoriteChampsFragment"
+        android:name="com.example.leagueofchamps.userFavoriteChampsFragment"
+        android:label="fragment_user_favorite_champs"
+        tools:layout="@layout/fragment_user_favorite_champs" >
+        <action
+            android:id="@+id/action_userFavoriteChampsFragment_to_userSummaryFragment"
+            app:destination="@id/userSummaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSummaryFragment"
+        android:name="com.example.leagueofchamps.userSummaryFragment"
+        android:label="fragment_user_summary"
+        tools:layout="@layout/fragment_user_summary" />
 </navigation>

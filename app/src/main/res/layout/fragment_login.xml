@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#757575"
+    android:background="@color/darkGray"
     android:id="@+id/fragment_container">
 
     <TextView
@@ -13,12 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="119dp"
         android:text="Login"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -27,12 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Welcome back!"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/etEmail"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
     <EditText
@@ -43,35 +41,37 @@
         android:layout_marginTop="46dp"
         android:layout_marginRight="39dp"
         android:background="@drawable/rounded_edittext_background"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/white"
         android:hint="Enter Your Email"
         android:padding="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPassword"
         app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPassword"
         android:layout_width="312dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="39dp"
         android:layout_marginRight="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEmail"
-        app:layout_constraintBottom_toTopOf="@+id/forgot_pass"
         app:passwordToggleEnabled="true"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
-            android:layout_width="312dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="28dp"
-            android:hint="Enter Your Password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/rounded_edittext_background"
-            android:textSize="14sp"
-            android:inputType="textPassword" />
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:hint="Enter Your Password"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,7 +86,6 @@
         android:textColor="#2F89FC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 
     <Button
@@ -98,10 +97,10 @@
         android:layout_marginRight="39dp"
         android:background="@drawable/rounded_botton_background"
         android:text="Login"
+        android:textColor="@color/white"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvCreateAccount"
         app:layout_constraintTop_toBottomOf="@+id/forgot_pass"
         tools:ignore="TextSizeCheck" />
 
@@ -111,10 +110,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="73dp"
+        android:textColor="@color/white"
         android:text="Don't have an account?"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/singup"
-        app:layout_constraintBottom_toTopOf="@+id/or"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <TextView
@@ -128,7 +127,6 @@
         android:textColor="#2F89FC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvCreateAccount"
-        app:layout_constraintBottom_toTopOf="@+id/or"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 
@@ -140,9 +138,9 @@
         android:layout_marginTop="23dp"
         android:layout_marginRight="39dp"
         android:text="Login with Facebook"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnLoginGoogle"
         app:layout_constraintTop_toBottomOf="@id/or" />
 
     <Button
@@ -152,11 +150,10 @@
         android:layout_marginLeft="39dp"
         android:layout_marginTop="23dp"
         android:layout_marginRight="39dp"
-        android:layout_marginBottom="168dp"
+        android:textColor="@color/white"
         android:text="Login with Google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/enter_witho"
         app:layout_constraintTop_toBottomOf="@id/btnLoginFacebook" />
 
     <TextView
@@ -167,10 +164,10 @@
         android:layout_marginBottom="23dp"
         android:layout_marginLeft="186dp"
         android:layout_marginRight="187dp"
+        android:textColor="@color/white"
         android:text="Or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnLoginFacebook"
         app:layout_constraintTop_toBottomOf="@id/tvCreateAccount" />
 
     <TextView
